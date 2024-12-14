@@ -1,0 +1,19 @@
+{
+  "name": "playwright-api-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "@currents/playwright": "^1.8.0",
+    "@playwright/test": "^1.49.1"
+  }
+}

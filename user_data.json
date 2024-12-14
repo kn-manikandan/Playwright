@@ -1,0 +1,24 @@
+{
+    "createUserPayload": {
+      "name": "Manikandan Kar",
+      "email": "manikandan@qaoncloud.com",
+      "phone": "9442156294"
+    },
+    "updateUserPayload": {
+      "name": "Richelle Manikandan",
+      "email": "richel.mani@gmail.com",
+      "phone": "9999777788"
+    },
+    "createPostPayload": {
+        "title": "First Post Manika",
+        "content": "QAC Software Testing company "
+
+      },
+      "updatePostPayload": {
+        "title": "Updated Post Title BEEMA",
+        "content": "QAonCloud is Software Testing Company"
+         
+      }
+    
+  }
+  

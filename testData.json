@@ -1,0 +1,46 @@
+[
+  {
+    "description": "Fetch all posts",
+    "method": "GET",
+    "endpoint": "/posts",
+    "expectedStatus": 200
+  },
+  {
+    "description": "Create a new post",
+    "method": "POST",
+    "endpoint": "/posts",
+    "body": {
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    },
+    "expectedStatus": 201,
+    "expectedResponse": {
+      "title": "foo",
+      "body": "bar",
+      "userId": 1
+    }
+  },
+  {
+    "description": "Update a post",
+    "method": "PUT",
+    "endpoint": "/posts/1",
+    "body": {
+      "id": 1,
+      "title": "updated foo",
+      "body": "updated bar",
+      "userId": 1
+    },
+    "expectedStatus": 200,
+    "expectedResponse": {
+      "title": "updated foo"
+    }
+  },
+  {
+    "description": "Delete a post",
+    "method": "DELETE",
+    "endpoint": "/posts/1",
+    "expectedStatus": 200
+  }
+  
+]
