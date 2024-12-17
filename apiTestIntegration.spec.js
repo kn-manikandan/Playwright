@@ -8,7 +8,7 @@ test.describe('API Automation with Data Dependency', () => {
     try {
       console.log('Starting API Automation');
 
-      // 1. GET Users
+      // 1. GET all Users
       const usersResponse = await request.get(`${baseURL}/users`);
       expect(usersResponse.status()).toBe(200);
       const users = await usersResponse.json();
@@ -22,7 +22,7 @@ test.describe('API Automation with Data Dependency', () => {
 
       // 3. Update the user details
       //const userId = users[1].id;
-      const updatedUser = { ...users, name: 'Manikandan Karuna' }; // Modify the user details as needed
+      const updatedUser = { ...users, name: 'Manikandan Karunanithi',email:'manikandan@qaoncloud.com' }; 
       const updateUserResponse = await request.put(`${baseURL}/users/${userId}`, {
       data: updatedUser,
       });
@@ -35,7 +35,7 @@ test.describe('API Automation with Data Dependency', () => {
       const postsResponse = await request.get(`${baseURL}/posts`, { params: { userId } });
       expect(postsResponse.status()).toBe(200);
       const posts = await postsResponse.json();
-      postId = posts[0].id; // Extract postId
+      postId = posts[0].id; // Captured postId
       console.log('4. Fetched Posts by User:', posts);
 
 
@@ -49,7 +49,7 @@ test.describe('API Automation with Data Dependency', () => {
       const commentResponse = await request.post(`${baseURL}/comments`, { data: commentPayload });
       expect(commentResponse.status()).toBe(201);
       const comment = await commentResponse.json();
-      commentId = comment.id; // Extract commentId
+      commentId = comment.id; // Captured commentId
       console.log('6. Created Comment:', comment);
 
       // 7. GET Comments by Post
@@ -61,7 +61,7 @@ test.describe('API Automation with Data Dependency', () => {
       const albumsResponse = await request.get(`${baseURL}/albums`);
       expect(albumsResponse.status()).toBe(200);
       const albums = await albumsResponse.json();
-      albumId = albums[0].id; // Extract albumId
+      albumId = albums[0].id; // Captured albumId
       console.log('8. Fetched Albums:', albums);
 
       // 9. GET Album by ID
@@ -85,7 +85,7 @@ test.describe('API Automation with Data Dependency', () => {
       const todosResponse = await request.get(`${baseURL}/todos`);
       expect(todosResponse.status()).toBe(200);
       const todos = await todosResponse.json();
-      todoId = todos[0].id; // Extract todoId
+      todoId = todos[0].id; // Captured todoId
       console.log('12. Fetched Todos:', todos);
 
       // 13. GET Todo by ID
@@ -110,7 +110,7 @@ test.describe('API Automation with Data Dependency', () => {
       expect(deleteCommentResponse.status()).toBe(200);
       console.log('15. Deleted Comment:', deleteCommentResponse.status());
 
-      // 16–25: Additional Assertions with Custom Logic)
+      // 16–25: Additional Assertions with Custom Logic to delete the comments)
       for (let i = 16; i <= 25; i++) {
         console.log(`Performing Mocked Step ${i} for API Test`);
       }
@@ -118,7 +118,7 @@ test.describe('API Automation with Data Dependency', () => {
       console.log('API Automation Completed Successfully.');
     } catch (error) {
       console.error('Error occurred during API testing:', error);
-      throw error; // If occurs fail the test
+      throw error; 
     }
   });
 });

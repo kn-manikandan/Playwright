@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.describe('API Testing with Playwright', () => {
+test.describe('API Testing using Playwright', () => {
   const baseURL = 'https://jsonplaceholder.typicode.com'; 
   
   test('GET Request - Fetch Posts', async ({ request }) => {
@@ -29,8 +29,8 @@ test.describe('API Testing with Playwright', () => {
   test('PUT Request - Update a Post', async ({ request }) => {
     const updatedPost = {
       id: 1,
-      title: 'updated foo',
-      body: 'updated bar',
+      title: 'updated food',
+      body: 'updated barbique',
       userId: 1,
     };
 

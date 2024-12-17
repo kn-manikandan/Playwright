@@ -7,7 +7,7 @@
     "updateUserPayload": {
       "name": "Richelle Manikandan",
       "email": "richel.mani@gmail.com",
-      "phone": "9999777788"
+      "phone": "9444766761"
     },
     "createPostPayload": {
         "title": "First Post Manika",
@@ -15,7 +15,7 @@
 
       },
       "updatePostPayload": {
-        "title": "Updated Post Title BEEMA",
+        "title": "Manikandan - Updated Post Title BEEMA",
         "content": "QAonCloud is Software Testing Company"
          
       }

@@ -1,12 +1,12 @@
 [
   {
-    "description": "Fetch all posts",
+    "description": "Fetch all posts Manikandan QAonCloud",
     "method": "GET",
     "endpoint": "/posts",
     "expectedStatus": 200
   },
   {
-    "description": "Create a new post",
+    "description": "Create a new post QAC",
     "method": "POST",
     "endpoint": "/posts",
     "body": {
@@ -27,13 +27,13 @@
     "endpoint": "/posts/1",
     "body": {
       "id": 1,
-      "title": "updated foo",
-      "body": "updated bar",
+      "title": "updated food",
+      "body": "updated barbique",
       "userId": 1
     },
     "expectedStatus": 200,
     "expectedResponse": {
-      "title": "updated foo"
+      "title": "updated food"
     }
   },
   {

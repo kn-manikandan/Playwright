@@ -9,7 +9,7 @@ test.describe('API Automation Testing - User and Post Management', () => {
         
         const userBaseURL = 'https://67592c1260576a194d13630d.mockapi.io/api/v2/user';
 
-        // Step 1: Create a new user using data from the JSON file
+        // Step 1: Create a new user using json data
         console.log('Starting: Create User');
         const createUserResponse = await request.post(userBaseURL, {
             data: jsonData.createUserPayload,
@@ -32,7 +32,7 @@ test.describe('API Automation Testing - User and Post Management', () => {
         // Log and validate the response of the Update User request
         expect(updateUserResponse.ok()).toBeTruthy();
         const updatedUser = await updateUserResponse.json();
-        console.log('User Updated Successfully:', updatedUser);
+        console.log('User details updated Successfully:', updatedUser);
 
         // Step 3: Validate the updated user details
         expect(updatedUser.name).toBe(jsonData.updateUserPayload.name);
